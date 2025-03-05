@@ -15,10 +15,16 @@ cargo run --release
 
 This compiles the project with optimizations and runs it.
 
+## How to Play
+- Use A and D to move the Player
+- Use the platforms to get as high as possible
+- Use the button that has no text to respawn
+
 ## Features
 - Written in **Rust**
 - Direct use of **Vulkan**, no graphics libraries
 - High-performance rendering
+- Gets harder the higher you get (Still remains easy because there are no opponents)
 
 ---
 
