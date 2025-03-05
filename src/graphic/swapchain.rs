@@ -146,15 +146,17 @@ impl Swapchain {
     }
 
     pub unsafe fn destroy(&mut self, device: &Device, framebuffer: &Vec<Framebuffer>) {
-    
-        for i in 0..self.image_views.len() {
-            device.destroy_framebuffer(framebuffer[i], None);
+        unsafe {
+            for i in 0..self.image_views.len() {
+                device.destroy_framebuffer(framebuffer[i], None);
+            }
+        
+            for image_view in &self.image_views {
+                device.destroy_image_view(*image_view, None);
+            }
+        
+            self.loader.destroy_swapchain(self.swapchain, None);
         }
     
-        for image_view in &self.image_views {
-            device.destroy_image_view(*image_view, None);
-        }
-    
-        self.loader.destroy_swapchain(self.swapchain, None);
     }
 }

@@ -183,7 +183,7 @@ impl World {
         self.current_view += (self.view_start as f32 - self.current_view) * smoothing_factor * delta_time;
     }
 
-    #[no_mangle]
+    #[unsafe(no_mangle)]
     pub fn restart(&mut self, ui: &mut UiState, _: &mut UiElement) {
         
         self.dead = false;

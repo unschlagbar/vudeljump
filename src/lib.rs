@@ -13,7 +13,7 @@ mod android {
     use crate::game::{app::App, World};
     use winit::event_loop::{EventLoop, EventLoopBuilder};
 
-    #[no_mangle]
+    #[unsafe(no_mangle)]
     pub fn android_main(app: AndroidApp) {
         setup_panic_hook();
         android_logger::init_once(android_logger::Config::default().with_max_level(log::LevelFilter::max()));
