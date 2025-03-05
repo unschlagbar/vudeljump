@@ -3,8 +3,8 @@ use ash::vk::{self};
 use super::{shader_modul, Vertex};
 
 pub fn create_main_pipeline(device: &ash::Device, window_size: winit::dpi::PhysicalSize<u32>, render_pass: vk::RenderPass, descriptor_set_layout: &vk::DescriptorSetLayout) -> (vk::PipelineLayout, vk::Pipeline) {
-    let vertex_shader_buff= include_bytes!("C:/Dev/vudeljump/shaders/vert.spv");
-    let fragment_shader_buff = include_bytes!("C:/Dev/vudeljump/shaders/frag.spv");
+    let vertex_shader_buff= include_bytes!("../../shaders/vert.spv");
+    let fragment_shader_buff = include_bytes!("../../shaders/frag.spv");
 
     let window_rect = vk::Rect2D { 
         offset: vk::Offset2D { x: 0, y: 0 },

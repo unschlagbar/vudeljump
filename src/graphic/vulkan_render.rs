@@ -559,7 +559,7 @@ impl VulkanRender {
     }
 
     fn create_texture_image(base: &VkBase, command_pool: &vk::CommandPool) -> graphics::Image {
-        let decoder = png::Decoder::new(&include_bytes!("C:/Dev/vudeljump/textures/texture.png")[..]);
+        let decoder = png::Decoder::new(&include_bytes!("../../textures/texture.png")[..]);
 
         let mut reader = decoder.read_info().unwrap();
         let mut buf = vec![0; reader.output_buffer_size()];
@@ -591,7 +591,7 @@ impl VulkanRender {
     }
 
     fn create_font_atlas(base: &VkBase, command_pool: &vk::CommandPool) -> graphics::Image {
-        let decoder = png::Decoder::new(&include_bytes!("C:/Dev/vudeljump/font/default8.png")[..]);
+        let decoder = png::Decoder::new(&include_bytes!("../../font/default8.png")[..]);
 
         let mut reader = decoder.read_info().unwrap();
         let mut buf = vec![0; reader.output_buffer_size()];
