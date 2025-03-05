@@ -28,9 +28,9 @@ pub fn build_main() -> UiState {
     };
 
 
-    let style_normal = Style::new(Align::Top, Zero, UIUnit::Relative(0.55), UiSize::Size(UIUnit::Relative(0.3)), UiSize::Size(UIUnit::RelativeHeight(0.06)), RGBA::BLACK, RGBA::GREEN, 2.0, Pixel(10.0));
-    let style_hover = Style::new(Align::Top, Zero, UIUnit::Relative(0.55), UiSize::Size(UIUnit::Relative(0.3)), UiSize::Size(UIUnit::RelativeHeight(0.06)), RGBA::BLACK, RGBA::BLUE, 2.0, Pixel(10.0));
-    let style_press = Style::new(Align::Top, Zero, UIUnit::Relative(0.55), UiSize::Size(UIUnit::Relative(0.3)), UiSize::Size(UIUnit::RelativeHeight(0.06)), RGBA::BLACK, RGBA::PURPLE, 2.0, Pixel(10.0));
+    let style_normal = Style::new(Align::Top, Zero, UIUnit::Relative(0.55), UiSize::Size(UIUnit::Relative(0.3)), UiSize::Size(UIUnit::RelativeWidth(0.1)), RGBA::BLACK, RGBA::GREEN, 2.0, Pixel(10.0));
+    let style_hover = Style::new(Align::Top, Zero, UIUnit::Relative(0.55), UiSize::Size(UIUnit::Relative(0.3)), UiSize::Size(UIUnit::RelativeWidth(0.1)), RGBA::BLACK, RGBA::BLUE, 2.0, Pixel(10.0));
+    let style_press = Style::new(Align::Top, Zero, UIUnit::Relative(0.55), UiSize::Size(UIUnit::Relative(0.3)), UiSize::Size(UIUnit::RelativeWidth(0.1)), RGBA::BLACK, RGBA::PURPLE, 2.0, Pixel(10.0));
 
     let score = UiElement::new(style, vec![Text::new(text_style, 0, "0", 3)]);
     let mut dead_message = UiElement::new(style2, vec![Text::new(text_style2, 0,"You dead", 3)]);

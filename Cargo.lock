@@ -532,6 +532,7 @@ dependencies = [
 [[package]]
 name = "iron_oxide"
 version = "0.1.0"
+source = "git+https://github.com/unschlagbar/my_lib?branch=main#617841175f9e466ee22f0dbceb7f5c38ac15bf28"
 dependencies = [
  "ash",
  "ash-window",
