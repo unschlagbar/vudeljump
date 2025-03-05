@@ -215,7 +215,7 @@ impl ApplicationHandler for App {
     fn resumed(&mut self, event_loop: &ActiveEventLoop) {
         self.init = true;
         println!("resumed");
-        let window_attributes = winit::window::Window::default_attributes().with_title("Raytracing").with_inner_size(PhysicalSize {width: WIDTH, height: HEIGHT}).with_min_inner_size(PhysicalSize {width: WIDTH, height: HEIGHT});
+        let window_attributes = winit::window::Window::default_attributes().with_title("Vudeljump").with_inner_size(PhysicalSize {width: WIDTH, height: HEIGHT}).with_min_inner_size(PhysicalSize {width: WIDTH, height: HEIGHT});
         let window = event_loop.create_window(window_attributes).unwrap();
         let mut renderer = self.renderer.borrow_mut();
         *renderer = ManuallyDrop::new(VulkanRender::create(window, &self.world));
