@@ -19,7 +19,7 @@ panic = "abort"
 opt-level = 0
 
 [dependencies]
-iron_oxide = { path = "C:/Dev/iron_oxide" }
+iron_oxide = { git = "https://github.com/unschlagbar/my_lib", branch = "main" }
 ash = { version = "0.38.0", features = [] }
 cgmath = "0.18.0"
 png = "0.17.14"
