@@ -1,29 +1,26 @@
 # Vudeljump
 
-Vudeljump ist ein Rust-Projekt, das Vulkan als Grafik-API verwendet – **ohne** eine zusätzliche Grafikbibliothek. Es ist ein reines Vulkan-Projekt, das direkt mit der GPU kommuniziert.
+Vudeljump is a Rust project that uses Vulkan as a graphics API – **without** any additional graphics library. It is a pure Vulkan project that communicates directly with the GPU.
 
-## Anforderungen
-- **Rust** (Installiere es mit [rustup](https://rustup.rs/))
-- Eine GPU, die **Vulkan** unterstützt
+## Requirements
+- **Rust** (Install it via [rustup](https://rustup.rs/))
+- A GPU that supports **Vulkan**
 
 ## Installation & Build
-Führe die folgenden Befehle aus, um das Projekt zu kompilieren und zu starten:
+Run the following command to compile and start the project:
 
 ```sh
 cargo run --release
 ```
 
-Dadurch wird das Projekt optimiert kompiliert und gestartet.
+This compiles the project with optimizations and runs it.
 
 ## Features
-- Geschrieben in **Rust**
-- Direkte Nutzung von **Vulkan**, keine Grafikbibliotheken
-- High-Performance Rendering
-
-## Lizenz
-Dieses Projekt steht unter der **MIT-Lizenz**. Weitere Informationen findest du in der Datei `LICENSE`.
+- Written in **Rust**
+- Direct use of **Vulkan**, no graphics libraries
+- High-performance rendering
 
 ---
 
-Viel Spaß mit **Vudeljump**! 🚀
+Have fun with **Vudeljump**! 🚀
 
