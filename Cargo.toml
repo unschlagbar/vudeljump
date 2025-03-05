@@ -1,0 +1,39 @@
+[package]
+name = "vudeljump"
+version = "0.1.0"
+edition = "2021"
+build = "build.rs"
+
+[lib]
+name = "main"
+crate-type = ["cdylib"]
+
+[profile.release]
+codegen-units = 1
+lto = "fat"
+debug-assertions = false
+overflow-checks = false
+panic = "abort"
+
+[profile.dev]
+opt-level = 0
+
+[dependencies]
+iron_oxide = { path = "C:/Dev/iron_oxide" }
+ash = { version = "0.38.0", features = [] }
+cgmath = "0.18.0"
+png = "0.17.14"
+ash-window = "0.13.0"
+ahash = "0.8.11"
+log = "0.4.22"
+rand = "0.8.5"
+
+[target.'cfg(target_os = "android")'.dependencies]
+winit = { version = "0.30.5", features = ["android-game-activity"] }
+android_logger = "0.14.1"
+
+[target.'cfg(not(target_os = "android"))'.dependencies]
+winit = { version = "0.30.5" }
+
+[features]
+linked = ["ash/linked"]
